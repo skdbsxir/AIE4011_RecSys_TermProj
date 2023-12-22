@@ -1,4 +1,4 @@
 # original dataset dir
 data/
-logs/
 checkpoints/
+__pycache__
