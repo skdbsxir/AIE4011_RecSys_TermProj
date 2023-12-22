@@ -115,7 +115,7 @@ class Neural_Matrix_Factorization(nn.Module):
 
         self.final_output = nn.Linear(in_features=args.layers[-1] + self.embed_dim_mf, out_features=1)
     
-    def foward(self, user_indices, item_indices):
+    def forward(self, user_indices, item_indices):
         user_embed_mf = self.embed_user_mf(user_indices)
         item_embed_mf = self.embed_item_mf(item_indices)
         
