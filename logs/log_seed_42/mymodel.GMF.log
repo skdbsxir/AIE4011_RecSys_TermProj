@@ -1,0 +1,38 @@
+{
+    "seed": 42,
+    "epoch": 50,
+    "lr": 0.001,
+    "dropout": 0.2,
+    "batch_size": 256,
+    "embed_dim": 32,
+    "layers": [
+        64,
+        32,
+        16,
+        8
+    ],
+    "name": "mymodel",
+    "model_type": "GMF"
+}
+
+
+Generalized_Matrix_Factorization(
+  (embed_user): Embedding(7176, 32)
+  (embed_item): Embedding(10728, 32)
+  (output): Linear(in_features=32, out_features=1, bias=True)
+)
+num_parameter: 572961
+
+
+########### Result ###########
+Total train time: 5411.6603s
+loading the best model from: /UbuntuHDD/2023_2_AIE4011_RecSys/AIE4011_RecSys_TermProj/checkpoints/checkpoints_seed_42/mymodel.GMF.model
+
+ [Evaluation Results]
+Loss: 1.85725
+RMSE: 0.90584
+MAE: 0.49689
+
+
+Test RMSE: 0.9058 (Best valid RMSE: 1.6781)
+Test MAE: 0.4969 (Best valid MAE: 0.6398)
