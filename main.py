@@ -237,7 +237,7 @@ def main():
     loss_function = nn.MSELoss(reduction='mean')
     optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=0.01)
 
-    writer = SummaryWriter(os.path.join(log_dir, f"{args.name}.tensorboard"))
+    writer = SummaryWriter(os.path.join(log_dir, f"{args.name}.{args.model_type}.tensorboard"))
 
     valid_RMSE, valid_MAE = 9999.0, 9999.0
 
